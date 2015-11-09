@@ -195,13 +195,13 @@
   border-bottom: solid 1px #fff;
 }
 
-.rs-caption-1:after,
+/*.rs-caption-1:after,
 .rs-caption-1:before {
   font-size: 16px;
   content: "\f005";
   position: absolute;
   font-family: FontAwesome;
-}
+}*/
 
 @media (max-width: 768px) {
   .rs-caption-1:after,

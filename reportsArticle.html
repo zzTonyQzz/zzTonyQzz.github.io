@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>文创研究中心 - 上海图书馆</title>
+    <title>简报详情 - 文创研究中心 - 上海图书馆</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen">
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="assets/css/pages/page_search_inner.css">
+
     <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
@@ -63,7 +66,12 @@
 	a, a:focus, a:hover, a:active {
 		text-decoration: none;		
 	}
-	
+	body {
+	 	font-size: 14px;
+	}
+	.article p {
+		text-indent: 2em;
+	}
 	</style>
 </head>
 
@@ -92,13 +100,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="menu-container">
                     <ul class="nav navbar-nav">
-                        <li class="page-scroll active">
+                        <li class="page-scroll">
                             <a href="index.html">首页</a>
                         </li>
                         <li class="page-scroll">
                             <a href="newsList.html">新闻</a>
                         </li>
-                        <li class="page-scroll">
+                        <li class="page-scroll active">
                             <a href="reportsList.html">简报</a>
                         </li>
                         <li class="page-scroll">
@@ -112,70 +120,46 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         <!-- /.container -->
     </nav>
     <!--=== End Header ===-->
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="fullscreenbanner-container">
-            <div class="fullscreenbanner">
-                <ul>
-                    <!-- SLIDE 1 -->
-                    <li data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
-                        <!-- MAIN IMAGE -->
-                        <img src="assets/img/sliders/revolution/bg1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-
-                        <!-- LAYERS -->
-                        <div class="tp-caption rs-caption-1 sft start"
-                            data-x="center"
-                            data-hoffset="0"
-                            data-y="100"
-                            data-speed="800"
-                            data-start="2000"
-                            data-easing="Back.easeInOut"
-                            data-endspeed="300">
-                            国&nbsp;家&nbsp;文&nbsp;化&nbsp;创&nbsp;新&nbsp;研&nbsp;究&nbsp;中&nbsp;心<br />
-                            &nbsp;国家文化财政政策研究基地
-                        </div>
-
-                        <!-- LAYER -->
-                        <!--<div class="tp-caption rs-caption-2 sft"
-                            data-x="center"
-                            data-hoffset="0"
-                            data-y="200"
-                            data-speed="1000"
-                            data-start="3000"
-                            data-easing="Power4.easeOut"
-                            data-endspeed="300"
-                            data-endeasing="Power1.easeIn"
-                            data-captionhidden="off"
-                            style="z-index: 6">
-                            践行公益性原则，为公众提供免费借阅服务.<br>
-                            集聚情报研究能力，为决策提供高质量的咨询服务.<br>
-                            顺应现代技术发展，开拓新阅读体验和泛在知识服务.<br>
-                            加强行业交流与社会合作，不断完善信息资源协作机制.
-                        </div>-->
-
-                        <!-- LAYER -->
-                        <div class="tp-caption rs-caption-3 sft"
-                            data-x="center"
-                            data-hoffset="0"
-                            data-y="360"
-                            data-speed="800"
-                            data-start="3500"
-                            data-easing="Power4.easeOut"
-                            data-endspeed="300"
-                            data-endeasing="Power1.easeIn"
-                            data-captionhidden="off"
-                            style="z-index: 6">
-                            <span class="page-scroll"><a href="#news" class="btn-u btn-brd btn-brd-hover btn-u-light">&nbsp;&nbsp;新&nbsp;闻&nbsp;&nbsp;</a></span>
-                            <span class="page-scroll"><a href="#portfolio" class="btn-u btn-brd btn-brd-hover btn-u-light">&nbsp;&nbsp;简&nbsp;报&nbsp;&nbsp;</a></span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="tp-bannertimer tp-bottom"></div>
-                <div class="tp-dottedoverlay twoxtwo"></div>
-            </div>
+    
+    <div class="breadcrumbs-v3 img-v1 text-center">
+        <div class="container">
+            <h1>国家文化创新研究中心</h1>
+            <p>国家文化财政政策研究基地</p>
         </div>
-    </section>
-    <!-- End Intro Section -->
+    </div>    
+    
+	<div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">简 报 详 情</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">主页</a></li>
+                <li><a href="reportsList.html">简报</a></li>
+                <li class="active">详情</li>
+            </ul>
+        </div><!--/container-->
+    </div>    
+
+    <div class="container content">		
+    	<div class="row-fluid article">
+            <h3 class="lead"><em>全面两孩最快12月底实施 大龄公务员盼早落地</em><br /><small>2015.11.9 by 管理员</small></h3>
+            <p>五中全会公布放开全面两孩之后，政策具体实施的日期成为民众热切关注的焦点。</p>
+            <p>今天，李克强总理在政协十二届常委会第十三次会议上回应政协委员提问时表示，落实中央两孩政策，首先需要修订《人口与计划生育法》以及相关法规。他同时表示，会以积极态度加快推进有关工作。</p>
+            <p>根据此前卫计委官员的表态，全面两孩政策实施的时间点将是《人口与计划生育法》完成修订并颁布后。而据法学专家分析，全面两孩政策最快可能12月底实施。</p>
+            <br />
+            <h4>大龄女盼政策早落地</h4>
+            <p>全面两孩政策公布放开后，各方反应强烈。由于该项政策的8600多万受益人群中有60%是35岁以上的育龄女性，这些群体对于全面两孩政策快速落地的呼声更高。第一财经客户端记者采访了多位正在积极备孕的女性，其中最大的杨女士已经45岁。</p>
+            <p>杨女士告诉记者，多年来她很想再要一个孩子，但是因为夫妻双方都是公职人员，一直在等待政策放开。“政策没落地，心总是悬着。希望政府能尽快明确。我其实不知道到底还能不能怀上，但还是想搏一搏。”</p>
+            <p>类似的呼声很多，也很急迫。福建省统计局普查中心副主任姚美雄建议，考虑到目前80后、90后整体生育意愿低于70后，而70后的生育窗口已经非常狭窄，应该加快政策落地的步伐，把这件得民心的好事做到底。甚至可以考虑为大龄女性再孕开辟一条绿色通道，让她们安心再孕。</p>
+            <br />
+            <h4>修法提上日程</h4>
+            <p>全面二孩政策公布放开之后，各界一度猜测，其实施步骤可能跟单独二孩相同。</p>
+            <p>2013年11月单独二孩政策在十八届三中全会上公布。2014年初，各省陆续实施，最早的是浙江省，实施日期为1月17日，最晚的是河南，实施日期为6月3日。按照这样的节奏，全面两孩政策也可能会在2016年上半年陆续实施。</p>
+            <p>但据卫计委计划生育基层指导司司长杨文庄介绍，这次全面两孩政策实施跟单独两孩将不同，不是各地自己修订地方条例后实施，而是采取统一的时间表，以《人口与计划生育法》的修订颁布为准。</p>
+            <p>此前，湖南省曾表示，五中全会公布之后、政策正式实施之前出生的符合全面两孩政策的孩子，一律不予追究责任。但这一表态很快被卫计委叫停。卫计委方面强调，各地不得自行其是。</p>
+            <p>根据杨文庄介绍，根据十八届五中全会的精神，需要提请全国人大常委会修订《人口与计划生育法》，配套的法规规定也要相应修订。而修订的内容，则主要是《人口与计划生育法》第18条以及相关条文，同时，配套的法规规章也需要做相应的修订。</p>
+        </div><!--/row-fluid-->        
+    </div>
+            
 	<div class="footer-v1">
         <div class="footer">
             <div class="container">
