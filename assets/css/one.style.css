@@ -149,7 +149,8 @@ a:hover {
 /*Navbar*/
 .one-page-header {
   border-bottom: none;
-  background: rgba(0,0,0,0.4);
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66000000', endColorstr='#66000000');
+  background:rgba(0,0,0,0.4);
 }
 .one-page-header .container {
   position: relative;
@@ -363,6 +364,7 @@ a:hover {
   }
   .one-page-header .dropdown-menu > li {
     background: rgba(0, 0, 0, 0.4);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66000000', endColorstr='#66000000');
   }
   .one-page-header.top-nav-collapse .dropdown-menu > li {
     background: #fff;
@@ -495,6 +497,7 @@ a:hover {
 .lang-block {
   float: right;
   background: rgba(0,0,0,0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
   padding: 6px 13px 4px 13px;
   margin: 10px 0 0 20px;
   font-size: 12.5px;
@@ -520,6 +523,7 @@ a:hover {
   padding: 0 13px 5px;
   margin: 0;
   background: rgba(0,0,0,0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
   position: absolute;
   left: 0;
   right: 0;
@@ -541,6 +545,7 @@ a:hover {
   .lang-block {
     float: none;
     background: rgba(0,0,0,0.6);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
     display: inline-block;
     position: absolute;
     top: 0;
@@ -551,6 +556,7 @@ a:hover {
 /*Fixed Header*/
 .one-page-header.top-nav-collapse {
   background: #fff;
+  filter: none;
   box-shadow: 0 0 3px #b5b5b5;
 }
 
@@ -644,6 +650,7 @@ a:hover {
 }
 .backstretch:after {
   background: rgba(0,0,0,0.3);
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4C000000', endColorstr='#4C000000');
   position: absolute;
   top: 0;
   left: 0;
@@ -655,7 +662,7 @@ a:hover {
 .promo-section h2 {
   color: #fff;
   font-size: 35px;
-  line-height: 1.1;
+  line-height: 1.5;
   font-weight: 200;
   padding: 10px 75px;
   position: relative;
@@ -664,22 +671,7 @@ a:hover {
   text-align: center;
   margin-bottom: 30px;
 }
-.promo-section h2:after,
-.promo-section h2:before {
-  font-size: 16px;
-  content: "\f005";
-  position: absolute;
-  font-family: FontAwesome;
-  position: absolute;
-  top: 50%;
-  margin-top: -8px;
-}
-.promo-section h2:after {
-  right: 4%;
-}
-.promo-section h2:before {
-  left: 4%;
-}
+
 .promo-text {
   color: #fff;
   position: relative;
@@ -710,16 +702,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.promo-section h2,
-.promo-text,
-.promo-next {
-  opacity: .9;
-}
-
 @media (max-width: 600px) {
   .promo-section h2 {
     font-size: 25px;
     margin-bottom: 10px;
+	padding: 10px 25px;
   }
   .promo-text {
     font-size: 18px;
