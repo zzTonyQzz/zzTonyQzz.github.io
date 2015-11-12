@@ -3862,3 +3862,6 @@ img.img-center,
    -ms-transform: scale(2) rotate(5deg);
    transform: scale(2) rotate(5deg);
 }
+#portfolio ul>li,#portfolio ul>li {
+	cursor: pointer;
+}

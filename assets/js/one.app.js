@@ -124,3 +124,7 @@ var App = function() {
   };
 
 }();
+$("#portfolio>ul>li,#news>ul>li").on("click",function(){
+	var url = $(this).find("a").eq(0).attr("href");
+	location.href = url;	
+})
