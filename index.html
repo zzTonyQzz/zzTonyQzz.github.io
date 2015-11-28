@@ -30,31 +30,25 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <style>
-	#portfolio ul>li {
-		line-height: 48px;
+
+	#news ul>li, #portfolio ul>li{
+		min-height: 48px;
 	}
-	#portfolio ul>li>.fa{
-		float: right;
-		margin-top: 10px;
-	}
-	#news ul>li {
-		height: 48px;
-	}
-	#news ul>li>a {
+	#news ul>li>a, #portfolio ul>li>a {
 		color: #FFF;
 		display: block;
 	}
 	.footer-v1 .link-list li:first-child {
 		border-top: none;
 	}
-	#news ul>li:first-child {
+	#news ul>li:first-child, #portfolio ul>li:first-child {
 		padding-top: 0;
 		border-top: none;
 		border-top-width: initial;
 		border-top-style: none;
 		border-top-color: initial;
 	}
-	#news ul>li {
+	#news ul>li, #portfolio ul>li {
 		padding: 8px 0;
 		border-top: 1px solid #353535;
 		border-top-width: 1px;
@@ -181,9 +175,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <div class="col-md-3 md-margin-bottom-40" id="portfolio">
                         <div class="headline"><h2>简&nbsp;报&nbsp;&nbsp;<a href="reportsList.html" ><small>查看更多</small></a>&nbsp;&nbsp;</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="reportsArticle_3.html">第3期</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="reportsArticle_2.html">第2期</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="reportsArticle_1.html">第1期</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="reportsArticle_3.html">启动贫困地区公共数字文化精准扶贫调研工作</a><small>第3期</small></li>
+                            <li><a href="reportsArticle_2.html">加强学习调研 推进基地工作</a><small>第2期</small></li>
+                            <li><a href="reportsArticle_1.html">上海图书馆公共数字文化研究基地工作启动</a><small>第1期</small></li>
                         </ul>
                     </div><!--/col-md-3-->
                     <!-- End Link List -->
@@ -194,7 +188,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <address class="md-margin-bottom-40">
                             永福路265号一楼 <br />
                             上海 徐汇区<br />
-                            Phone: 6445555 <br />
+                            Phone: 64455555 <br />
                             Email: <a href="mailto:szyjs@libnet.sh.cn" class="">szyjs@libnet.sh.cn</a>
                         </address>
                     </div><!--/col-md-3-->
