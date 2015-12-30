@@ -29,6 +29,9 @@
     <!--[if lt IE 9]><link rel="stylesheet" href="../assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
     <!-- CSS Customization -->
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+
     <!--[if lt IE 9]>
         <script src="../assets/js/html5shiv.min.js">
         </script>
@@ -319,7 +322,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 					var tags = element.tags;
 					var duration = element.duration;
 					var cover = element["image-alternate"][2].url.replace("0/2.jpg","1/2.jpg");
-					$("#owl").append('<div class=thumbnail style="height: auto;"><a href="javascript:playVideo('+index+');" title="'+ title +'" target=_blank ><img class=lazy src='+ cover +' width=300 height=150 alt='+ title +'></a><div class=caption  style="height:160px;"><h3><a href="javascript:playVideo('+index+');" title="'+ title +'" title="'+ title +'" target=_blank >'+ title +'<br><small>'+ tags +'</small></a></h3><p>时长：'+ duration + 's</p></div></div>');
+					$("#owl").append('<div class=thumbnail style="height: auto;"><a href="javascript:playVideo('+index+');" title="'+ title +'" target=_blank ><img class=lazy src='+ cover +' width=300 height=150 alt='+ title +'></a><div class=caption  style="height:110px;"><h3><a href="javascript:playVideo('+index+');" title="'+ title +'" title="'+ title +'" target=_blank >'+ title +'<br><small>'+ tags +'</small></a></h3><p>时长：'+ duration + 's</p></div></div>');
 				});
 					$("#owl").owlCarousel({
 						pagination: true,
