@@ -46,6 +46,13 @@
 		max-width: 100%;
 		height: auto;
 	}
+	.owl-theme .owl-controls {
+		margin-top: -10px;
+		margin-bottom: 30px;
+	}		
+	.owl-theme .owl-controls .owl-buttons div {
+		zoom: 1.5;
+	}
 	</style>    
 </head>
 
@@ -110,6 +117,10 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             	<p>2015年12月4日，由文化部公共文化司指导、上海图书馆主办的“大数据与公共数字文化服务研讨会”在上海图书馆成功举办，来自国家公共文化服务体系建设专家委员会、文化部公共文化研究基地等50余位专家学者齐聚一堂，围绕“大数据与公共数字文化服务”这一主题深入探讨。本次会议契合“互联网+”以及大数据行动计划等国家重大信息化战略要求，在即将开启“十三五”新篇章之际，必将对“十三五”期间的公共数字文化服务产生深远的影响。</p>
                 <div style="width:600px;min-height:300px;margin:auto;" class="player">
                 </div>
+                <hr />
+                <div id="owl">
+                 
+                </div>            
             </blockquote>
             <h3 class="lead"><em>会议主旨报告</em></h3>
 <h4>【主旨报告1】《面向农村、基层的“互联网+”公共文化服务》</h4>
@@ -263,10 +274,19 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="../assets/js/plugins/owl-carousel.js"></script>
     <script src="../assets/js/plugins/revolution-slider.js"></script>
     <script src="../assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script src="owl-carousel/owl.carousel.js"></script>
     <script>
-        jQuery(document).ready(function() {
-            App.init();
-            RevolutionSlider.initRSfullScreen();
+		var startID = 0;
+		var videos = [];
+		var nowID = 0;
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return r[2];
+		}		
+		GetQueryString("startID")?startID=GetQueryString("startID")*1-1:"";
+		function playVideo(id){
+			nowID = id;
 			var width = $(".player").width();
 			var height = width*49/60;
 			var player= document.getElementsByClassName('player')[0];   
@@ -275,11 +295,43 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 			script.type= 'text/javascript';  
 			script.onload = script.onreadystatechange = function() {  
 				if (!this.readyState || this.readyState === "loaded" ||    this.readyState === "complete" ) { 
-					script.onload = script.onreadystatechange = null;  
+					//console.log("loaded!!!");  
+					// Handle memory leak in IE 
+						script.onload = script.onreadystatechange = null;  
 				} };  
-			script.src= "http://e.library.sh.cn/test/cc/js/cc.js?vid="+"CF45E8E4C05134A39C33DC5901307461"+"&siteid=9D3BB32E53DC188E&autoStart=false&width=100%&height="+height+"&playerid=277440561DEB7754&playertype=1"; 
+			script.src= "http://e.library.sh.cn/test/cc/js/cc.js?vid="+videos[id]+"&siteid=9D3BB32E53DC188E&autoStart=false&width=100%&height="+height+"&playerid=277440561DEB7754&playertype=1"; 
 			player.appendChild(script); 
-        });
+			$("#owl .thumbnail").css("border","1px solid #ddd").eq(id).css("border","1px solid #f00");	 
+			var owl = $("#owl").data('owlCarousel');
+			owl.goTo(id);
+		}
+		$(document).ready(function(e) {
+			App.init();
+			RevolutionSlider.initRSfullScreen();
+			$.get("json/cc.json",function(data){
+				$(data.videos.video).each(function(index, element) {
+					var eq = element.title.split(".")[0];
+					
+					var id = element.id;
+					videos.push(id);
+					var title = element.title;
+					console.log(title+"##"+"http://e.library.sh.cn/intro/"+eq+".htm");
+					var tags = element.tags;
+					var duration = element.duration;
+					var cover = element["image-alternate"][2].url.replace("0/2.jpg","1/2.jpg");
+					$("#owl").append('<div class=thumbnail style="height: auto;"><a href="javascript:playVideo('+index+');" title="'+ title +'" target=_blank ><img class=lazy src='+ cover +' width=300 height=150 alt='+ title +'></a><div class=caption  style="height:160px;"><h3><a href="javascript:playVideo('+index+');" title="'+ title +'" title="'+ title +'" target=_blank >'+ title +'<br><small>'+ tags +'</small></a></h3><p>时长：'+ duration + 's</p></div></div>');
+				});
+					$("#owl").owlCarousel({
+						pagination: true,
+						navigation : true,
+						items: 4,
+						itemsDesktop: [1199, 4],
+						itemsDesktopSmall: [979, 4],
+						itemsMobile: [479,2]
+					});	
+					playVideo(startID);
+			},"json");
+		});
     </script>
 </body>
 </html>
