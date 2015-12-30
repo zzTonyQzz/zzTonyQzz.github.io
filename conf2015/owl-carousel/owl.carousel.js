@@ -1469,7 +1469,7 @@ if (typeof Object.create !== "function") {
         stopOnHover : false,
 
         navigation : false,
-        navigationText : ["prev", "next"],
+        navigationText : ["上一个", "下一个"],
         rewindNav : true,
         scrollPerPage : false,
 
