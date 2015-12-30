@@ -1,1 +1,74 @@
 /* Add here all your css styles (customizations) */
+#news ul>li, #portfolio ul>li{
+	min-height: 48px;
+}
+#news ul>li>a, #portfolio ul>li>a {
+	color: #FFF;
+	display: block;
+}
+.footer-v1 .link-list li:first-child {
+	border-top: none;
+}
+#news ul>li:first-child, #portfolio ul>li:first-child {
+	padding-top: 0;
+	border-top: none;
+	border-top-width: initial;
+	border-top-style: none;
+	border-top-color: initial;
+}
+#news ul>li, #portfolio ul>li {
+	padding: 8px 0;
+	border-top: 1px solid #353535;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(53, 53, 53);
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;		
+}
+#portfolio ul>li>.fa{
+	float: right;
+	margin-top: 10px;
+}
+#news ul>li>a {
+	color: #FFF;
+	display: block;
+}
+.footer-v1 .link-list li:first-child {
+	border-top: none;
+}
+#news ul>li:first-child {
+	padding-top: 0;
+	border-top: none;
+	border-top-width: initial;
+	border-top-style: none;
+	border-top-color: initial;
+}
+#news ul>li {
+	padding: 8px 0;
+	border-top: 1px solid #353535;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(53, 53, 53);
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;		
+}
+body {
+	font-size: 14px;
+}
+.article p {
+	text-indent: 2em;
+}
+
+
+
+
+
+.article p.hasimg {
+    text-indent: 0em;
+}
+.article img {
+	max-height: 400px;
+	max-width: 100%;
+}
