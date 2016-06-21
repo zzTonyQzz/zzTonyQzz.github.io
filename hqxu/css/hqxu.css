@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* hqxu CSS Document */
+.title {
+	font-size: 18px;
+	color: #259;
+    font-weight: 700;
+	margin: 30px 0 20px 0;
+}
+.article p {
+    text-indent: 2em;
+	color: #555;
+	margin: 0 0 10px;
+}
+.article p.hasimg {
+    text-indent: 0em;
+}
+.article p.hasimg img {
+    max-height: 400px;
+    max-width: 100%;
+}
